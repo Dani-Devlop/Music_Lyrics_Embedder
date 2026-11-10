@@ -1,13 +1,12 @@
-# python install -r requirements.txt
-beautifulsoup4==4.14.3
-certifi==2026.5.20
-charset-normalizer==3.4.7
-idna==3.17
-music-tag==0.4.3
-mutagen==1.47.0
-RapidFuzz==3.14.5
+# Music_Lyrics_Embedder (v2 — main.py)
+# Deliberately minimal: the scraper-library stack (syncedlyrics, music-tag,
+# beautifulsoup4, RapidFuzz) was removed on purpose so nothing can break from
+# an external "library" side anymore.
+#   - Lyrics  : LRCLIB over plain HTTP  (requests)
+#   - Metadata: Deezer / iTunes Search  (requests)
+#   - Tagging : mutagen (ID3 USLT / Vorbis lyrics comment)
+#
+# Install:
+#   python -m pip install -r requirements.txt
 requests==2.34.2
-soupsieve==2.8.4
-syncedlyrics==1.0.1
-typing_extensions==4.15.0
-urllib3==2.7.0
+mutagen==1.47.0

@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+failed_songs.txt
+.venv/
+venv/
